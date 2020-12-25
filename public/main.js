@@ -53,30 +53,45 @@ function signIn() {
 }
 
 function setImage(index) {
-    images[index].getDownloadURL().then(url => {
-        selected_image.src = url
+    try {
+        images[index].getDownloadURL().then(url => {
+            selected_image.src = url
 
-        selected_image.onload = () => {
-            if (next_image.hidden) {
-                next_image.hidden = false;
+            selected_image.onload = () => {
+                if (next_image.hidden || previous_image.hidden) {
+                    next_image.hidden = false;
+                    previous_image.hidden = false;
+                }
             }
-        }
-    });
+
+            image_counter_text.innerHTML = (image_counter + 1).toString() + "/" + (images.length).toString()
+        });
+    } catch (err) {
+        console.log("Error setting image to index: " + index);
+    }
 }
 
-function nextImage() {
-    setImage(image_counter)
-    image_counter++
+function changeImage(value) {
+    image_counter += value
 
-    if (image_counter > images.length - 1) {
-        image_counter = 0
+    if (value === 1) {
+        if (image_counter > images.length - 1) {  // Next image
+            image_counter = 0
+        }
+    } else if (value === -1) {
+        if (image_counter < 0) {
+            image_counter = images.length - 1  // Previous image
+        }
+    } else {
+        throw Error("Error attempting to change image.")
     }
 
+    setImage(image_counter)
     console.log("Set image: ", image_counter)
 }
 
 storageRef.listAll().then(res => {
     images = res.items
     console.log("All images loaded")
-    setImage(0)
+    setImage(0);
 });

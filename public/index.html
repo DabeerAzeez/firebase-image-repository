@@ -15,12 +15,12 @@
 <script src="main.js"></script>
 
 <img src="" id="selected_image" alt="selected image" width=560>
+<p id="image_counter_text" style="font-family: sans-serif"></p>
 <script>
     let selected_image = document.getElementById("selected_image")
+    let image_counter_text = document.getElementById("image_counter_text")
     selected_image.src="404NotFound.png"  // Default 404 not found
 </script>
-<br>
-<br>
 
 <div>
     <input type="file" id="image_upload">
@@ -36,9 +36,13 @@
     <button onclick="uploadImage()">Upload Image</button>
 
     <button onclick="signIn()" id="sign-in">Sign In</button>
-    <button onclick="nextImage()" id="next_image">Next Image</button>
+    <button onclick="changeImage(-1)" id="previous_image">Previous</button>
+    <button onclick="changeImage(1)" id="next_image">Next</button>
     <script>
+        let previous_image = document.getElementById('previous_image')
         let next_image = document.getElementById('next_image')
+
+        previous_image.hidden = true;
         next_image.hidden = true;
     </script>
 </div>
