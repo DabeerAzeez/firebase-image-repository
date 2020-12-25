@@ -16,6 +16,7 @@ function uploadImage() {
     const fileRef = storageRef.child(file.name)
 
     fileRef.put(file).then(() => {
+        image_upload.files = [];  // clear uploaded image
         alert('Image uploaded successfully!');
     }).catch(error => {
         if (!current_user) {
