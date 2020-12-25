@@ -6,27 +6,18 @@
 </head>
 <body>
 
-<input type="file" id="image_upload">
+<script src="/__/firebase/8.2.1/firebase-app.js"></script>
+<script src="/__/firebase/8.2.1/firebase-analytics.js"></script>
+<script src="/__/firebase/8.2.1/firebase-auth.js"></script>
+<script src="/__/firebase/8.2.1/firebase-storage.js"></script>
+<script src="/__/firebase/init.js?useEmulator=true"></script>
+
+<script src="main.js"></script>
+
+<input type="file" id="image_upload">  <!-- Filter only .jpeg files -->
 <button onclick="uploadImage()">Upload Image</button>
 
-
-<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-storage.js"></script>
-
-<script>
-    var firebaseConfig = {
-        apiKey: "AIzaSyCmMwgb_tjgZlqB3QtlvwUvB1RXJeZvSME",
-        authDomain: "image-repository-aaaf3.firebaseapp.com",
-        projectId: "image-repository-aaaf3",
-        storageBucket: "image-repository-aaaf3.appspot.com",
-        messagingSenderId: "196293242030",
-        appId: "1:196293242030:web:ae99ebcb19697b6c84913f",
-        measurementId: "G-2PZLSP8SYH"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    firebase.analytics();
-</script>
+<button onclick="signIn()" id="sign-in">Sign In</button>
 
 </body>
 </html>
