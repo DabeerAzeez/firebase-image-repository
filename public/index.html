@@ -22,7 +22,16 @@
 <br>
 
 <div>
-    <input type="file" id="image_upload">  <!-- Filter only .jpeg files -->
+    <input type="file" id="image_upload">
+    <script>
+        let image_upload = document.getElementById('image_upload')
+        image_upload.addEventListener('change', () => {
+            if (getFileExtension(image_upload.files[0]) !== "jpg") {
+                alert("Only JPG images are supported")
+                image_upload.value=''
+            }
+        })
+    </script>
     <button onclick="uploadImage()">Upload Image</button>
 
     <button onclick="signIn()" id="sign-in">Sign In</button>

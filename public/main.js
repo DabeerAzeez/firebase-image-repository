@@ -26,6 +26,10 @@ function uploadImage() {
     });
 }
 
+function getFileExtension(file) {
+    return file.name.split('.').pop()
+}
+
 function signIn() {
     if (!signedIn) {
         firebase.auth().signInWithPopup(provider).then(function(result) {
