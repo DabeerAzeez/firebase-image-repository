@@ -6,17 +6,20 @@ let image_counter = 0;
 let images = [];
 
 function uploadImage() {
-    const file = document.getElementById('image_upload').files[0];
+    loading_gif.hidden=false;
+    const file = image_upload.files[0];
 
     if (!file) {
         alert("No file chosen!")
+        loading_gif.hidden=true;
         return
     }
 
-    const fileRef = storageRef.child(file.name)
+    const fileRef = storageRef.child(file.name + new Date())
 
     fileRef.put(file).then(() => {
         image_upload.files = [];  // clear uploaded image
+        loading_gif.hidden=true;
         alert('Image uploaded successfully!');
     }).catch(error => {
         if (!current_user) {

@@ -15,12 +15,19 @@
 <script src="main.js"></script>
 
 <img src="" id="selected_image" alt="selected image" width=560>
-<p id="image_counter_text" style="font-family: sans-serif"></p>
+<div>
+    <span id="image_counter_text" style="font-family: sans-serif"></span>
+    <img src="images/Spinner.gif" id="loading_gif" height=40 style="margin-left: 20px">
+</div>
+
 <script>
     let selected_image = document.getElementById("selected_image")
     let image_counter_text = document.getElementById("image_counter_text")
     let default_image_path = "images/404NotFound.png"  // Default 404 not found
     selected_image.src=default_image_path
+
+    let loading_gif = document.getElementById("loading_gif")
+    loading_gif.hidden=true;
 </script>
 
 <div>
