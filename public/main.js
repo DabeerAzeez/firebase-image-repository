@@ -1,8 +1,9 @@
 const storageRef = firebase.storage().ref();
-var provider = new firebase.auth.GoogleAuthProvider();
-var signedIn = false;
-var image_counter = 0;
-var images = [];
+const provider = new firebase.auth.GoogleAuthProvider();
+let current_user = firebase.auth().currentUser;
+let signedIn = false;
+let image_counter = 0;
+let images = [];
 
 function uploadImage() {
     const file = document.getElementById('image_upload').files[0];
@@ -17,7 +18,11 @@ function uploadImage() {
     fileRef.put(file).then(snapshot => {
         alert('Image uploaded successfully!');
     }).catch(error => {
-        alert("Error occurred while uploading, please ensure you are signed in." + "\n\n" + error)
+        if (!current_user) {
+            alert("Please sign in to upload images!")
+        } else {
+            alert("Error occurred while uploading: " + error)
+        }
     });
 }
 
