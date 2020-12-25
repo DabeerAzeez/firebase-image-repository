@@ -93,6 +93,12 @@ function changeImage(value) {
 
 storageRef.listAll().then(res => {
     images = res.items
-    console.log("All images loaded")
-    setImage(0);
+
+    if (images.length !== 0) {
+        console.log("All images loaded")
+        setImage(0);
+    } else {
+        console.log("No images found in storage.")
+        selected_image.src = default_image_path
+    }
 });
