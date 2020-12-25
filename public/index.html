@@ -14,10 +14,20 @@
 
 <script src="main.js"></script>
 
-<input type="file" id="image_upload">  <!-- Filter only .jpeg files -->
-<button onclick="uploadImage()">Upload Image</button>
+<img src="" id="selected_image" alt="selected image" width=560>
+<script>
+    document.getElementById("selected_image").src="https://i.stack.imgur.com/6M513.png"  // Default 404 not found
+</script>
+<br>
+<br>
 
-<button onclick="signIn()" id="sign-in">Sign In</button>
+<div>
+    <input type="file" id="image_upload">  <!-- Filter only .jpeg files -->
+    <button onclick="uploadImage()">Upload Image</button>
+
+    <button onclick="signIn()" id="sign-in">Sign In</button>
+    <button onclick="nextImage()" id="next_image">Next Image</button>
+</div>
 
 </body>
 </html>
