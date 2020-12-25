@@ -54,7 +54,13 @@ function signIn() {
 
 function setImage(index) {
     images[index].getDownloadURL().then(url => {
-        document.getElementById("selected_image").src = url
+        selected_image.src = url
+
+        selected_image.onload = () => {
+            if (next_image.hidden) {
+                next_image.hidden = false;
+            }
+        }
     });
 }
 

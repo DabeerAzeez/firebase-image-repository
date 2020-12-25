@@ -16,7 +16,8 @@
 
 <img src="" id="selected_image" alt="selected image" width=560>
 <script>
-    document.getElementById("selected_image").src="404NotFound.png"  // Default 404 not found
+    let selected_image = document.getElementById("selected_image")
+    selected_image.src="404NotFound.png"  // Default 404 not found
 </script>
 <br>
 <br>
@@ -36,6 +37,10 @@
 
     <button onclick="signIn()" id="sign-in">Sign In</button>
     <button onclick="nextImage()" id="next_image">Next Image</button>
+    <script>
+        let next_image = document.getElementById('next_image')
+        next_image.hidden = true;
+    </script>
 </div>
 
 </body>
