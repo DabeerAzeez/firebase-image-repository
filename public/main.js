@@ -24,8 +24,10 @@ function uploadImage() {
     }).catch(error => {
         if (!current_user) {
             alert("Please sign in to upload images!")
+            loading_gif.hidden=true;
         } else {
             alert("Error occurred while uploading: " + error)
+            loading_gif.hidden=true;
         }
     });
 }
