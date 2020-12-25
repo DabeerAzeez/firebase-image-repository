@@ -15,7 +15,7 @@ function uploadImage() {
 
     const fileRef = storageRef.child(file.name)
 
-    fileRef.put(file).then(snapshot => {
+    fileRef.put(file).then(() => {
         alert('Image uploaded successfully!');
     }).catch(error => {
         if (!current_user) {
@@ -32,17 +32,13 @@ function getFileExtension(file) {
 
 function signIn() {
     if (!signedIn) {
-        firebase.auth().signInWithPopup(provider).then(function(result) {
-            var token = result.credential.accessToken;
-            var user = result.user;
+        firebase.auth().signInWithPopup(provider).then(result => {
+            const token = result.credential.accessToken;
+            const user = result.user;
             signedIn = true
             document.getElementById('sign-in').innerHTML = "Sign Out";
             alert("Signed in successfully")
-        }).catch(function(error) {
-            var errorCode = error.code;
-            var errorMessage = error.message;
-            var email = error.email;
-            var credential = error.credential;
+        }).catch(() => {
             alert("There was an error signing you in. Please contact the developer of this crude web app immediately.")
         });
     } else {
@@ -50,8 +46,8 @@ function signIn() {
             signedIn = false
             document.getElementById('sign-in').innerHTML = "Sign In";
             console.log("Signed out successfully")
-        }).catch(function(error) {
-            alert("There was an error signing you out. Please contact the developer of this crude web app immediately.")
+        }).catch(err => {
+            alert("There was an error signing you out: " + err)
         });
     }
 }
@@ -69,11 +65,12 @@ function nextImage() {
     if (image_counter > images.length - 1) {
         image_counter = 0
     }
+
+    console.log("Set image: ", image_counter)
 }
 
 storageRef.listAll().then(res => {
     images = res.items
+    console.log("All images loaded")
     setImage(0)
-    console.log("Finished loading images")
 });
-
