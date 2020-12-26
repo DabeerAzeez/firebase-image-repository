@@ -46,7 +46,8 @@ async function uploadImage(file) {
             return false
         } else {
             alert("Error occurred while uploading: " + error)
-            throw Error("Unknown error occurred while uploading images: " + error)
+            console.log("Unknown error occurred while uploading images: " + error)
+            return false
         }
     }
 

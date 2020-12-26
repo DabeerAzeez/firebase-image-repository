@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="59f11ed2-aa77-453e-8150-a420553c9201" name="Default Changelist" comment="Prevent multiple alerts due to failed image upload">
+    <list default="true" id="59f11ed2-aa77-453e-8150-a420553c9201" name="Default Changelist" comment="Hide loading gif after failed image upload">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/main.js" afterDir="false" />
     </list>
@@ -70,7 +70,7 @@
       <workItem from="1608899086598" duration="22554000" />
       <workItem from="1608948130082" duration="1779000" />
       <workItem from="1608985537851" duration="1517000" />
-      <workItem from="1608987134950" duration="305000" />
+      <workItem from="1608987134950" duration="526000" />
     </task>
     <task id="LOCAL-00001" summary="Add sign-in check on image upload">
       <created>1608901436478</created>
@@ -338,7 +338,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608987357395</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Hide loading gif after failed image upload">
+      <created>1608987459925</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1608987459925</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -360,7 +367,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Hide loading gif on error within uploadImage()" />
     <MESSAGE value="Change image_counter_text default text" />
     <MESSAGE value="Rename 404 image to default_image.png" />
     <MESSAGE value="Updated storage.rules" />
@@ -385,6 +391,7 @@
     <MESSAGE value="Remove unnecessary throw" />
     <MESSAGE value="Include bootstrap and styling" />
     <MESSAGE value="Prevent multiple alerts due to failed image upload" />
-    <option name="LAST_COMMIT_MESSAGE" value="Prevent multiple alerts due to failed image upload" />
+    <MESSAGE value="Hide loading gif after failed image upload" />
+    <option name="LAST_COMMIT_MESSAGE" value="Hide loading gif after failed image upload" />
   </component>
 </project>
