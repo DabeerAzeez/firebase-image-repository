@@ -3,7 +3,7 @@ const provider = new firebase.auth.GoogleAuthProvider();
 const MAX_UPLOAD_SIZE = 5 * 1024 * 1024;  // bytes
 
 let current_image_index = 0;
-let image_file_list = new FileList();
+let image_file_list
 let signedIn
 let supported_filetypes = ['png', 'jpg', 'jpeg', 'webp', 'gif', 'bmp'];
 
