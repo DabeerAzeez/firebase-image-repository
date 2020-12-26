@@ -3,7 +3,7 @@ const provider = new firebase.auth.GoogleAuthProvider();
 const MAX_UPLOAD_SIZE = 5 * 1024 * 1024;  // bytes
 
 let current_image_index = 0;
-let image_file_list
+let storageRef_list
 let signedIn
 let supported_filetypes = ['png', 'jpg', 'jpeg', 'webp', 'gif', 'bmp'];
 
@@ -77,11 +77,11 @@ function signInOut() {
 
 function setImage(index) {
     try {
-        image_upload.files[index].getDownloadURL().then(url => {
+        storageRef_list[index].getDownloadURL().then(url => {
             selected_image.src = url
 
             selected_image.onload = () => {  // Show 'Next' and 'Previous' buttons if there is more than one image
-                if ((next_image.hidden || previous_image.hidden) && (image_file_list.length > 1)) {
+                if ((next_image.hidden || previous_image.hidden) && (storageRef_list.length > 1)) {
                     next_image.hidden = false;
                     previous_image.hidden = false;
                 }
@@ -89,22 +89,22 @@ function setImage(index) {
 
             // Update image counter
             image_counter_text.innerHTML = (current_image_index + 1).toString() + "/" +
-                (image_file_list.length).toString()
+                (storageRef_list.length).toString()
         });
     } catch (error) {
-        throw Error("Error setting image to index " + index + ": " + error);
+        throw Error("Cannot set image to index " + index + ": " + error);
     }
 }
 
 function changeImage(value) {
     current_image_index += value
 
-    if ((value === 1) && (current_image_index > image_file_list.length - 1)) {
+    if ((value === 1) && (current_image_index > storageRef_list.length - 1)) {
         // Loop back to beginning when clicking 'Next' on last item
         current_image_index = 0
     } else if ((value === -1) && (current_image_index < 0)) {
         // Loop back to end when clicking 'Previous' on first item
-        current_image_index = image_file_list.length - 1
+        current_image_index = storageRef_list.length - 1
     } else {
         throw Error("Error attempting to change image.")
     }
@@ -125,9 +125,9 @@ function checkFileType(file) {
 
 // Load in images from storage
 storageRef.listAll().then(res => {
-    image_file_list = res.items
+    storageRef_list = res.items
 
-    if (image_file_list.length !== 0) {
+    if (storageRef_list.length !== 0) {
         console.log("All images loaded")
         setImage(0);
     } else {
