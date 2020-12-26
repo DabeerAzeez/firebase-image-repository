@@ -54,24 +54,23 @@ function getFileExtension(file) {
     return file.name.split('.').pop()
 }
 
-function signIn() {
-    if (!signedIn) {
-        firebase.auth().signInWithPopup(provider).then(result => {
-            const token = result.credential.accessToken;
-            const user = result.user;
+function signInOut() {
+    if (!signedIn) { // If signed out, sign in
+        firebase.auth().signInWithPopup(provider).then(() => {
             signedIn = true
-            document.getElementById('sign-in').innerHTML = "Sign Out";
-            alert("Signed in successfully")
-        }).catch(() => {
-            alert("There was an error signing you in. Please contact the developer of this crude web app immediately.")
+            sign_in.innerHTML = "Sign Out";
+            console.log("Signed in successfully")
+        }).catch(error => {
+            alert("There was an error signing you in." + error)
         });
-    } else {
-        firebase.auth().signOut().then(function() {
+    } else { // If signed in, sign out
+        firebase.auth().signOut().then(() => {
+            firebase.auth().currentUser = null;
             signedIn = false
-            document.getElementById('sign-in').innerHTML = "Sign In";
+            sign_in.innerHTML = "Sign In";
             console.log("Signed out successfully")
-        }).catch(err => {
-            alert("There was an error signing you out: " + err)
+        }).catch(error => {
+            alert("There was an error signing you out: " + error)
         });
     }
 }
