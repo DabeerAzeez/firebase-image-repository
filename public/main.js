@@ -45,7 +45,7 @@ async function uploadImage(file) {
             console.log("Error, attempted image upload while signed out.")
             return false
         } else {
-            alert("Error occurred while uploading: " + error)
+            alert("Error occurred while uploading following image: " + file.name)
             console.log("Unknown error occurred while uploading images: " + error)
             return false
         }
