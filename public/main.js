@@ -96,6 +96,17 @@ function changeImage(value) {
     console.log("Set image: ", image_counter)
 }
 
+function checkFileType(file) {
+    let file_ext = getFileExtension(file);
+    if (!supported_filetypes.includes(file_ext)) {
+        alert("Unsupported file type. This app supports the following image types: " +
+            supported_filetypes.toString())
+        return false
+    }
+    return true
+}
+
+// Load in images from storage
 storageRef.listAll().then(res => {
     images = res.items
 

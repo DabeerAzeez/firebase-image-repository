@@ -34,10 +34,27 @@
     <input type="file" id="image_upload">
     <script>
         let image_upload = document.getElementById('image_upload')
+
+        // On file selection...
         image_upload.addEventListener('change', () => {
-            if (getFileExtension(image_upload.files[0]) !== "jpg") {
-                alert("Only JPG images are supported")
-                image_upload.value=''
+            let files = image_upload.files;
+            let upload_size = 0;
+
+            for (let i=0; i < files.length; i++) {
+                // Only allow image files
+                if (!checkFileType(files[i])) {
+                    image_upload.value = null;
+                    break
+                }
+
+                // Restrict upload size
+                upload_size += files[i].size
+                if (upload_size > MAX_UPLOAD_SIZE) {
+                    alert("Upload size too large. You can up load up to " + MAX_UPLOAD_SIZE/(1024**2) +
+                        "MB of files at once")
+                    image_upload.value=null;
+                    break
+                }
             }
         })
     </script>
