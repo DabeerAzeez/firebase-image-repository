@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="59f11ed2-aa77-453e-8150-a420553c9201" name="Default Changelist" comment="Update workspace.xml" />
+    <list default="true" id="59f11ed2-aa77-453e-8150-a420553c9201" name="Default Changelist" comment="Update README.md">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -64,7 +67,7 @@
       <workItem from="1608855460896" duration="7000" />
       <workItem from="1608855511148" duration="558000" />
       <workItem from="1608856081041" duration="10390000" />
-      <workItem from="1608899086598" duration="21657000" />
+      <workItem from="1608899086598" duration="22190000" />
     </task>
     <task id="LOCAL-00001" summary="Add sign-in check on image upload">
       <created>1608901436478</created>
@@ -269,7 +272,21 @@
       <option name="project" value="LOCAL" />
       <updated>1608941981953</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Update workspace.xml">
+      <created>1608942011936</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1608942011936</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Update README.md">
+      <created>1608942135250</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1608942135250</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -291,7 +308,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Hide 'Next Image' button until first image load" />
     <MESSAGE value="Move back and forth between images with a display counter" />
     <MESSAGE value="Change index.html title" />
     <MESSAGE value="Clear selected image after successful upload" />
@@ -316,6 +332,7 @@
     <MESSAGE value="Tidy up HTML" />
     <MESSAGE value="Add welcome and description text to index.html" />
     <MESSAGE value="Update workspace.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update workspace.xml" />
+    <MESSAGE value="Update README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update README.md" />
   </component>
 </project>
