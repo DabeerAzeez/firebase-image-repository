@@ -105,8 +105,6 @@ function changeImage(value) {
     } else if ((value === -1) && (current_image_index < 0)) {
         // Loop back to end when clicking 'Previous' on first item
         current_image_index = storageRef_list.length - 1
-    } else {
-        throw Error("Error attempting to change image.")
     }
 
     setImage(current_image_index)
