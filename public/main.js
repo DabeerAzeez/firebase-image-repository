@@ -97,22 +97,20 @@ function setImage(index) {
 }
 
 function changeImage(value) {
-    image_counter += value
+    current_image_index += value
 
-    if (value === 1) {
-        if (image_counter > images.length - 1) {  // Next image
-            image_counter = 0
-        }
-    } else if (value === -1) {
-        if (image_counter < 0) {
-            image_counter = images.length - 1  // Previous image
-        }
+    if ((value === 1) && (current_image_index > image_file_list.length - 1)) {
+        // Loop back to beginning when clicking 'Next' on last item
+        current_image_index = 0
+    } else if ((value === -1) && (current_image_index < 0)) {
+        // Loop back to end when clicking 'Previous' on first item
+        current_image_index = image_file_list.length - 1
     } else {
         throw Error("Error attempting to change image.")
     }
 
-    setImage(image_counter)
-    console.log("Set image: ", image_counter)
+    setImage(current_image_index)
+    console.log("Successfully set image at index: ", current_image_index)
 }
 
 function checkFileType(file) {
