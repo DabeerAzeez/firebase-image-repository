@@ -125,9 +125,9 @@ function checkFileType(file) {
 
 // Load in images from storage
 storageRef.listAll().then(res => {
-    images = res.items
+    image_file_list = res.items
 
-    if (images.length !== 0) {
+    if (image_file_list.length !== 0) {
         console.log("All images loaded")
         setImage(0);
     } else {
