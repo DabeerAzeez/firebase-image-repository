@@ -20,6 +20,9 @@ async function uploadImages() {
 
     for (let i = 0; i < image_upload.files.length; i++) {
         images_flag = await uploadImage(image_upload.files[i]);
+        if (images_flag === false) {
+            return
+        }
     }
 
     loading_gif.hidden = true;

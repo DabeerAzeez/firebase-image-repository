@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="59f11ed2-aa77-453e-8150-a420553c9201" name="Default Changelist" comment="Remove unnecessary throw">
-      <change afterPath="$PROJECT_DIR$/public/bootstrap.css" afterDir="false" />
+    <list default="true" id="59f11ed2-aa77-453e-8150-a420553c9201" name="Default Changelist" comment="Include bootstrap and styling">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +69,8 @@
       <workItem from="1608856081041" duration="10390000" />
       <workItem from="1608899086598" duration="22554000" />
       <workItem from="1608948130082" duration="1779000" />
-      <workItem from="1608985537851" duration="1446000" />
+      <workItem from="1608985537851" duration="1517000" />
+      <workItem from="1608987134950" duration="41000" />
     </task>
     <task id="LOCAL-00001" summary="Add sign-in check on image upload">
       <created>1608901436478</created>
@@ -324,7 +324,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608949215688</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Include bootstrap and styling">
+      <created>1608987004571</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1608987004571</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -346,7 +353,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Update storage.rules" />
     <MESSAGE value="Hide loading gif on error within uploadImage(0" />
     <MESSAGE value="Hide loading gif on error within uploadImage()" />
     <MESSAGE value="Change image_counter_text default text" />
@@ -371,6 +377,7 @@
     <MESSAGE value="Remove illegal FileList() constructor" />
     <MESSAGE value="Rename image_file_list" />
     <MESSAGE value="Remove unnecessary throw" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove unnecessary throw" />
+    <MESSAGE value="Include bootstrap and styling" />
+    <option name="LAST_COMMIT_MESSAGE" value="Include bootstrap and styling" />
   </component>
 </project>
