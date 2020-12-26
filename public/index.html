@@ -31,7 +31,7 @@
 </script>
 
 <div>
-    <input type="file" id="image_upload">
+    <input type="file" id="image_upload" multiple> <!-- 'Choose File...' Button -->
     <script>
         let image_upload = document.getElementById('image_upload')
 
@@ -58,9 +58,11 @@
             }
         })
     </script>
-    <button onclick="uploadImage()">Upload Image</button>
-
-    <button onclick="signIn()" id="sign-in">Sign In</button>
+    <button onclick="uploadImages()">Upload Images</button>
+    <button onclick="signInOut()" id="sign-in">Sign In</button>
+    <script>
+        let sign_in = document.getElementById("sign-in");
+    </script>
     <button onclick="changeImage(-1)" id="previous_image">Previous</button>
     <button onclick="changeImage(1)" id="next_image">Next</button>
     <script>

@@ -5,31 +5,52 @@ let signedIn = false;
 let image_counter = 0;
 let images = [];
 
-function uploadImage() {
-    loading_gif.hidden=false;
-    const file = image_upload.files[0];
+let current_image_index = 0;
+let image_file_list = new FileList();
+let signedIn
+let supported_filetypes = ['png', 'jpg', 'jpeg', 'webp', 'gif', 'bmp'];
 
-    if (!file) {
+async function uploadImages() {
+    loading_gif.hidden = false;
+
+    if (image_upload.files.length === 0) {
         alert("No file chosen!")
-        loading_gif.hidden=true;
+        loading_gif.hidden = true;
         return
     }
 
-    const fileRef = storageRef.child(file.name + new Date())
+    let images_flag = true
 
-    fileRef.put(file).then(() => {
-        image_upload.files = [];  // clear uploaded image
-        loading_gif.hidden=true;
-        alert('Image uploaded successfully!');
-    }).catch(error => {
-        if (!current_user) {
+    for (let i = 0; i < image_upload.files.length; i++) {
+        images_flag = await uploadImage(image_upload.files[i]);
+    }
+
+    loading_gif.hidden = true;
+
+    if (images_flag === true) {
+        alert("Images uploaded successfully! Refresh to view.")
+        image_upload.value = null;  // clear selected image(s) from selection
+    }
+}
+
+async function uploadImage(file) {
+    const fileRef = storageRef.child(new Date() + " " + file.name)  // Give files timestamped names
+
+    try {
+        await fileRef.put(file)
+    } catch (error) {
+        if (firebase.auth().currentUser === null) {
             alert("Please sign in to upload images!")
-            loading_gif.hidden=true;
+            console.log("Error, attempted image upload while signed out.")
+            return false
         } else {
             alert("Error occurred while uploading: " + error)
-            loading_gif.hidden=true;
+            throw Error("Unknown error occurred while uploading images: " + error)
         }
-    });
+    }
+
+    console.log('Image uploaded successfully!');
+    return true
 }
 
 function getFileExtension(file) {
