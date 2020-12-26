@@ -77,7 +77,7 @@ function signInOut() {
 
 function setImage(index) {
     try {
-        images[index].getDownloadURL().then(url => {
+        image_upload.files[index].getDownloadURL().then(url => {
             selected_image.src = url
 
             selected_image.onload = () => {
@@ -87,10 +87,12 @@ function setImage(index) {
                 }
             }
 
-            image_counter_text.innerHTML = (image_counter + 1).toString() + "/" + (images.length).toString()
+            // Update image counter
+            image_counter_text.innerHTML = (current_image_index + 1).toString() + "/" +
+                (image_file_list.length).toString()
         });
-    } catch (err) {
-        console.log("Error setting image to index: " + index);
+    } catch (error) {
+        throw Error("Error setting image to index " + index + ": " + error);
     }
 }
 
