@@ -1,9 +1,6 @@
 const storageRef = firebase.storage().ref();
 const provider = new firebase.auth.GoogleAuthProvider();
-let current_user = firebase.auth().currentUser;
-let signedIn = false;
-let image_counter = 0;
-let images = [];
+const MAX_UPLOAD_SIZE = 5 * 1024 * 1024;  // bytes
 
 let current_image_index = 0;
 let image_file_list = new FileList();
