@@ -80,8 +80,8 @@ function setImage(index) {
         image_upload.files[index].getDownloadURL().then(url => {
             selected_image.src = url
 
-            selected_image.onload = () => {
-                if (next_image.hidden || previous_image.hidden) {
+            selected_image.onload = () => {  // Show 'Next' and 'Previous' buttons if there is more than one image
+                if ((next_image.hidden || previous_image.hidden) && (image_file_list.length > 1)) {
                     next_image.hidden = false;
                     previous_image.hidden = false;
                 }
