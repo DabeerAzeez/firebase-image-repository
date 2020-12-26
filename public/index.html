@@ -29,21 +29,24 @@
 <div style="background-color: #CCCCCC" class="py-4">
     <img src="" class="rounded mx-auto d-block" id="selected_image" alt="selected image" width=800>
 
-    <div style="margin-bottom: 10px;" class="text-center">
-    <span id="image_counter_text" style="font-family: sans-serif; font-size: 12px">
-        No Images Found in Storage
-    </span>
-        <img src="images/Spinner.gif" id="loading_gif" height=40 style="margin-left: 20px">
+    <div style="width: 800px" class="mx-auto mt-2 mb-3">
+        <div style="margin-bottom: 10px;" class="d-flex justify-content-between" width=800>
+            <span id="image_counter_text">
+                No Images Found in Storage
+            </span>
+            <img src="images/Spinner.gif" id="loading_gif" height=40 style="margin-left: 20px">
+            <span>Images may load slowly and there may be duplicates.</span>
+        </div>
     </div>
 
     <script>
         let selected_image = document.getElementById("selected_image")
         let image_counter_text = document.getElementById("image_counter_text")
         let default_image_path = "images/default_image.png"
-        selected_image.src=default_image_path
+        selected_image.src = default_image_path
 
         let loading_gif = document.getElementById("loading_gif")
-        loading_gif.hidden=true;
+        loading_gif.hidden = true;
     </script>
 
     <div class="d-flex justify-content-center" id="buttons">
@@ -56,7 +59,7 @@
                 let files = image_upload.files;
                 let upload_size = 0;
 
-                for (let i=0; i < files.length; i++) {
+                for (let i = 0; i < files.length; i++) {
                     // Only allow image files
                     if (!checkFileType(files[i])) {
                         image_upload.value = null;
@@ -66,9 +69,9 @@
                     // Restrict upload size
                     upload_size += files[i].size
                     if (upload_size > MAX_UPLOAD_SIZE) {
-                        alert("Upload size too large. You can up load up to " + MAX_UPLOAD_SIZE/(1024**2) +
+                        alert("Upload size too large. You can up load up to " + MAX_UPLOAD_SIZE / (1024 ** 2) +
                             "MB of files at once")
-                        image_upload.value=null;
+                        image_upload.value = null;
                         break
                     }
                 }
