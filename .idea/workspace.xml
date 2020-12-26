@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="59f11ed2-aa77-453e-8150-a420553c9201" name="Default Changelist" comment="Rename 404 image to default_image.png">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/default_image.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/default_image.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage.rules" beforeDir="false" afterPath="$PROJECT_DIR$/storage.rules" afterDir="false" />
-    </list>
+    <list default="true" id="59f11ed2-aa77-453e-8150-a420553c9201" name="Default Changelist" comment="Update workspace.xml" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -70,7 +64,7 @@
       <workItem from="1608855460896" duration="7000" />
       <workItem from="1608855511148" duration="558000" />
       <workItem from="1608856081041" duration="10390000" />
-      <workItem from="1608899086598" duration="21255000" />
+      <workItem from="1608899086598" duration="21657000" />
     </task>
     <task id="LOCAL-00001" summary="Add sign-in check on image upload">
       <created>1608901436478</created>
@@ -177,7 +171,105 @@
       <option name="project" value="LOCAL" />
       <updated>1608907448949</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Updated storage.rules">
+      <created>1608941593412</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1608941593412</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Add black border to default_image.png">
+      <created>1608941606372</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1608941606372</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Check file type and upload size on upload attempt">
+      <created>1608941701889</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1608941701889</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Allow multiple image uploads">
+      <created>1608941775072</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1608941775072</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Remove unnecessary constants, add MAX_UPLOAD_SIZE">
+      <created>1608941807458</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1608941807458</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Adapt signIn() to signInOut() toggle">
+      <created>1608941833389</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1608941833389</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Update setImage to use appropriate variables">
+      <created>1608941875179</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1608941875179</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Prevent 'Next' and 'Previous' buttons from showing for only one image">
+      <created>1608941890049</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1608941890049</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Tidy up changeImage()">
+      <created>1608941914377</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1608941914377</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Use image_file_list variable when loading images from storage">
+      <created>1608941937348</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1608941937348</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Check user authentication on page load">
+      <created>1608941947690</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1608941947690</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Tidy up HTML">
+      <created>1608941960811</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1608941960811</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Add welcome and description text to index.html">
+      <created>1608941971958</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1608941971958</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Update workspace.xml">
+      <created>1608941981953</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1608941981953</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -199,10 +291,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add sign-in check on image upload" />
-    <MESSAGE value="Check for .jpg files" />
-    <MESSAGE value="Housekeeping" />
-    <MESSAGE value="More 404NotFound.png to local storage" />
     <MESSAGE value="Hide 'Next Image' button until first image load" />
     <MESSAGE value="Move back and forth between images with a display counter" />
     <MESSAGE value="Change index.html title" />
@@ -214,6 +302,20 @@
     <MESSAGE value="Hide loading gif on error within uploadImage()" />
     <MESSAGE value="Change image_counter_text default text" />
     <MESSAGE value="Rename 404 image to default_image.png" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rename 404 image to default_image.png" />
+    <MESSAGE value="Updated storage.rules" />
+    <MESSAGE value="Add black border to default_image.png" />
+    <MESSAGE value="Check file type and upload size on upload attempt" />
+    <MESSAGE value="Allow multiple image uploads" />
+    <MESSAGE value="Remove unnecessary constants, add MAX_UPLOAD_SIZE" />
+    <MESSAGE value="Adapt signIn() to signInOut() toggle" />
+    <MESSAGE value="Update setImage to use appropriate variables" />
+    <MESSAGE value="Prevent 'Next' and 'Previous' buttons from showing for only one image" />
+    <MESSAGE value="Tidy up changeImage()" />
+    <MESSAGE value="Use image_file_list variable when loading images from storage" />
+    <MESSAGE value="Check user authentication on page load" />
+    <MESSAGE value="Tidy up HTML" />
+    <MESSAGE value="Add welcome and description text to index.html" />
+    <MESSAGE value="Update workspace.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update workspace.xml" />
   </component>
 </project>
