@@ -6,24 +6,27 @@
 </head>
 <body>
 
+<!-- Firebase scripts -->
 <script src="/__/firebase/8.2.1/firebase-app.js"></script>
 <script src="/__/firebase/8.2.1/firebase-analytics.js"></script>
 <script src="/__/firebase/8.2.1/firebase-auth.js"></script>
 <script src="/__/firebase/8.2.1/firebase-storage.js"></script>
 <script src="/__/firebase/init.js?useEmulator=true"></script>
-
 <script src="main.js"></script>
 
 <img src="" id="selected_image" alt="selected image" width=560>
-<div>
-    <span id="image_counter_text" style="font-family: sans-serif; font-size: 12px">No Images Found!</span>
+
+<div style="margin-bottom: 10px;">
+    <span id="image_counter_text" style="font-family: sans-serif; font-size: 12px">
+        No Images Found in Storage
+    </span>
     <img src="images/Spinner.gif" id="loading_gif" height=40 style="margin-left: 20px">
 </div>
 
 <script>
     let selected_image = document.getElementById("selected_image")
     let image_counter_text = document.getElementById("image_counter_text")
-    let default_image_path = "images/404NotFound.png"  // Default 404 not found
+    let default_image_path = "images/default_image.png"
     selected_image.src=default_image_path
 
     let loading_gif = document.getElementById("loading_gif")
@@ -56,7 +59,7 @@
                     break
                 }
             }
-        })
+        });
     </script>
     <button onclick="uploadImages()">Upload Images</button>
     <button onclick="signInOut()" id="sign-in">Sign In</button>
