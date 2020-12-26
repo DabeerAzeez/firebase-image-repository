@@ -135,3 +135,14 @@ storageRef.listAll().then(res => {
         selected_image.src = default_image_path
     }
 });
+
+// Check if user is signed in on page load
+firebase.auth().onAuthStateChanged(user => {
+    if (user) {
+        sign_in.innerHTML = "Sign Out"
+        signedIn = true;
+    } else {
+        sign_in.innerHTML = "Sign In"
+        signedIn = false;
+    }
+})
