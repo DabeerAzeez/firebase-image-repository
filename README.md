@@ -18,4 +18,4 @@ Visit now at https://image-repository-aaaf3.web.app/
 - Rejection of unsupported filetypes (only image filetypes supported)
 - Rejection of unauthorized uploads (must sign in)
 - Flip through images within database
-- Maximum upload size: 5 MB worth of files at a time
+- Fixed maximum upload size
